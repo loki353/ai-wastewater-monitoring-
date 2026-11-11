@@ -201,6 +201,16 @@ def metric_delta_text(anomaly_rate: float) -> str:
 # -----------------------------------------------------------------------------
 # Data availability and loading
 # -----------------------------------------------------------------------------
+# On a fresh deployment (for example Streamlit Community Cloud) the outputs folder may be
+# missing. Run the analysis automatically from the included dataset so the app still works.
+if not CLEANED_FILE.exists() or not ANOMALY_FILE.exists():
+    try:
+        import main as analysis_module
+        with st.spinner("First launch: running the analysis from the included dataset..."):
+            analysis_module.main()
+    except Exception as exc:  # shown below if the files are still missing
+        st.warning(f"Automatic analysis could not run: {exc}")
+
 if not CLEANED_FILE.exists() or not ANOMALY_FILE.exists():
     st.markdown(
         """
