@@ -1,0 +1,30 @@
+AI-ASSISTED WASTEWATER MONITORING - RUN SUMMARY
+Dataset: UCI Water Treatment Plant (ID 106)
+Observations analysed: 527
+Numeric variables analysed: 38
+Anomalies flagged: 27
+Typical-pattern observations: 500
+Percentage flagged: 5.12%
+Model setting: Isolation Forest contamination=0.05 (the model was configured to screen for about 5% unusual rows).
+Score interpretation: negative decision scores are flagged; more negative scores are more unusual. Scores are not probabilities.
+
+MOST UNUSUAL OBSERVATIONS (lowest decision scores)
+- Observation 29: score -0.02009
+- Observation 313: score -0.01370
+- Observation 206: score -0.01280
+- Observation 461: score -0.00938
+- Observation 226: score -0.00859
+- Observation 311: score -0.00824
+- Observation 46: score -0.00777
+- Observation 441: score -0.00754
+- Observation 273: score -0.00713
+- Observation 431: score -0.00684
+
+SCREENING RECOMMENDATIONS
+- Effluent BOD (DBO-S) is unusually high relative to this dataset. Check aeration performance, biological-treatment conditions and incoming organic-load changes. (53 observations above the dataset's 90th percentile.)
+- Effluent COD (DQO-S) is unusually high relative to this dataset. Review industrial/inlet load variation and verify whether the treatment process is removing chemical oxygen demand effectively. (53 observations above the dataset's 90th percentile.)
+- Effluent suspended solids (SS-S) are unusually high relative to this dataset. Inspect clarification/settling performance, sludge carryover and solids-separation equipment. (53 observations above the dataset's 90th percentile.)
+- The anomaly model flagged 27 observation(s). Review the corresponding readings, check sensor calibration and investigate possible process disturbances before taking corrective action.
+- These are screening suggestions, not regulatory compliance decisions or proof of a specific fault. Compare readings with applicable discharge standards and confirm findings with plant operators.
+
+Model note: Isolation Forest is unsupervised anomaly screening. No labelled test set was provided, so accuracy/precision/recall are not reported.

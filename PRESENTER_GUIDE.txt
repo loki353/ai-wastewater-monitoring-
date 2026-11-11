@@ -1,0 +1,87 @@
+WATERWISE - SHORT PRESENTER GUIDE
+=================================
+
+PROJECT TITLE
+AI-Assisted Wastewater Monitoring and Anomaly Detection
+
+60-90 SECOND INTRODUCTION
+-------------------------
+"Our project uses Python, data analysis and unsupervised machine learning to
+screen wastewater-treatment measurements for unusual patterns. We selected
+the UCI Water Treatment Plant dataset, which contains 527 observations and
+38 numeric variables collected from an urban wastewater-treatment plant.
+
+We first convert the measurements to numeric values and handle missing
+readings using median imputation. We then standardize the variables and apply
+Isolation Forest to identify unusual combinations of measurements.
+
+In Saketh's run, the model flagged 27 observations, or 5.12%, as unusual.
+We also separately compare final-effluent BOD, COD and suspended solids with
+their dataset-specific 90th percentiles. The dashboard visualizes these
+measurements, shows the anomaly scores, and provides investigation suggestions
+such as checking aeration, reviewing organic loads and inspecting clarification.
+
+The purpose is to help prioritize further investigation. The flags are not
+proof of a pollution incident or a regulatory violation."
+
+DASHBOARD DEMONSTRATION ORDER
+-----------------------------
+1. Overview: point out 527 observations, 38 variables, 27 anomaly flags and
+   the 5.12% screening share.
+2. Effluent analysis: select BOD (DBO-S), COD (DQO-S) and suspended solids
+   (SS-S). Explain that the dashed line is the dataset's 90th percentile.
+3. Anomaly inspection: show the orange/flagged points and the table of unusual
+   observations. More negative decision scores are more unusual.
+4. Data explorer: show the cleaned readings and available CSV download.
+5. Abatement guidance: explain the practical investigation prompts.
+
+LIKELY FACULTY QUESTIONS
+------------------------
+Q: What is Isolation Forest?
+A: An unsupervised anomaly-detection algorithm. It isolates unusual data
+   points through random feature and split selection. It does not need a
+   labelled normal/polluted class for training.
+
+Q: Why did you choose it?
+A: We did not have verified incident labels for each observation. Isolation
+   Forest can screen multivariable data for unusual combinations without
+   requiring those labels.
+
+Q: What does contamination=0.05 mean?
+A: It configures the model to expect roughly 5% of observations to be unusual.
+   It is a modelling setting, not a pollution percentage or legal threshold.
+
+Q: Why are accuracy, precision and recall not shown?
+A: There is no ground-truth label for every observation in this experiment,
+   so supervised classification metrics cannot be calculated meaningfully.
+
+Q: What do BOD, COD and SS mean?
+A: BOD is the oxygen demand from biological breakdown of organic matter. COD
+   is the oxygen equivalent of chemically oxidizable substances. SS means
+   suspended solids in the water.
+
+Q: Does an anomaly mean the water is unsafe or illegal to discharge?
+A: No. It only means the combination of measurements is unusual relative to
+   the dataset. Operators must verify the readings and compare them with the
+   applicable discharge standards.
+
+Q: Is this connected to live sensors?
+A: No. It analyses historical measurements from the public UCI dataset. A
+   live sensor connection would be a future extension.
+
+Q: How are the recommendations produced?
+A: They combine two separate signals: Isolation Forest anomaly flags and
+   Python rules that check whether selected effluent values exceed the
+   dataset-specific 90th percentile. The recommendations are rule-based
+   investigation prompts, not direct outputs of the ML model.
+
+IF THE DASHBOARD DOES NOT OPEN
+------------------------------
+Use the static graphs in results_preview and the result figures in
+RESULTS_SUMMARY.txt as a fallback. Do not claim the interactive dashboard was
+running if it was not successfully launched.
+
+DATASET CREDIT
+--------------
+Poch, M. (1993). Water Treatment Plant [Dataset]. UCI Machine Learning
+Repository. https://doi.org/10.24432/C5FS4C. License: CC BY 4.0.

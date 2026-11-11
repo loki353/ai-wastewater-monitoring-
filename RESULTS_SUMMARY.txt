@@ -1,0 +1,42 @@
+RESULTS FROM SAKETH'S SUCCESSFUL LOCAL RUN
+==========================================
+Dataset: UCI Water Treatment Plant (ID 106)
+Observations analysed: 527
+Numeric variables analysed: 38
+Anomalies flagged: 27
+Typical-pattern observations: 500
+Percentage flagged: 5.12%
+Missing values before cleaning: 591
+Missing values after cleaning: 0
+
+Dataset-relative effluent screening:
+- BOD (DBO-S): 45 observations above the dataset's 90th percentile.
+- COD (DQO-S): 53 observations above the dataset's 90th percentile.
+- Suspended solids (SS-S): 53 observations above the dataset's 90th percentile.
+
+Ten most unusual observations (lowest decision scores):
+- Observation 11: -0.17444
+- Observation 12: -0.11856
+- Observation 149: -0.11002
+- Observation 210: -0.08955
+- Observation 444: -0.08193
+- Observation 13: -0.08026
+- Observation 442: -0.07791
+- Observation 399: -0.06098
+- Observation 443: -0.04844
+- Observation 209: -0.04340
+
+Interpretation:
+Isolation Forest is unsupervised anomaly screening. Its scores are not
+probabilities. Negative decision scores are flagged; more negative values
+are more unusual. The 5% contamination setting configures the expected
+share of observations to screen; it does not mean 5% of wastewater is polluted.
+
+The BOD, COD and suspended-solids checks are separate percentile-based rules.
+They compare values with this dataset's 90th percentile and are not regulatory
+limits. The suggestions are investigation prompts, not proof of a specific
+plant fault or a discharge-standard violation.
+
+Note: The result figures are included in results_preview. On the recipient's
+computer, running START_WATERWISE.bat generates the CSV outputs and dashboard
+from the dataset, rather than treating this text file as live analysis.

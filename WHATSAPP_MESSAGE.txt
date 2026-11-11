@@ -1,0 +1,7 @@
+Hey bro, I am sharing the complete WATERWISE Task 3 project.
+
+Please extract the ZIP and double-click START_WATERWISE.bat. It installs/checks the libraries, runs the analysis using the dataset included in the ZIP, and opens the interactive dashboard in your browser.
+
+Important: Do not run app.py with `python app.py`; use the .bat launcher. Keep the terminal open while presenting.
+
+The PRESENTER_GUIDE.txt file has the demo order and likely faculty questions.

@@ -1,0 +1,39 @@
+Variable,Description,Stage,Units
+Q-E,Input flow to the plant,Influent,Not specified in the repository summary
+ZN-E,Zinc concentration at plant input,Influent,Not specified in the repository summary
+PH-E,pH at plant input,Influent,Not specified in the repository summary
+DBO-E,Biological oxygen demand at plant input,Influent,Not specified in the repository summary
+DQO-E,Chemical oxygen demand at plant input,Influent,Not specified in the repository summary
+SS-E,Suspended solids at plant input,Influent,Not specified in the repository summary
+SSV-E,Volatile suspended solids at plant input,Influent,Not specified in the repository summary
+SED-E,Sediments at plant input,Influent,Not specified in the repository summary
+COND-E,Conductivity at plant input,Influent,Not specified in the repository summary
+PH-P,pH at primary settler,Primary treatment,Not specified in the repository summary
+DBO-P,Biological oxygen demand at primary settler,Primary treatment,Not specified in the repository summary
+SS-P,Suspended solids at primary settler,Primary treatment,Not specified in the repository summary
+SSV-P,Volatile suspended solids at primary settler,Primary treatment,Not specified in the repository summary
+SED-P,Sediments at primary settler,Primary treatment,Not specified in the repository summary
+COND-P,Conductivity at primary settler,Primary treatment,Not specified in the repository summary
+PH-D,pH at secondary settler,Secondary treatment,Not specified in the repository summary
+DBO-D,Biological oxygen demand at secondary settler,Secondary treatment,Not specified in the repository summary
+DQO-D,Chemical oxygen demand at secondary settler,Secondary treatment,Not specified in the repository summary
+SS-D,Suspended solids at secondary settler,Secondary treatment,Not specified in the repository summary
+SSV-D,Volatile suspended solids at secondary settler,Secondary treatment,Not specified in the repository summary
+SED-D,Sediments at secondary settler,Secondary treatment,Not specified in the repository summary
+COND-D,Conductivity at secondary settler,Secondary treatment,Not specified in the repository summary
+PH-S,pH at final plant output,Effluent,Not specified in the repository summary
+DBO-S,Biological oxygen demand at final plant output,Effluent,Not specified in the repository summary
+DQO-S,Chemical oxygen demand at final plant output,Effluent,Not specified in the repository summary
+SS-S,Suspended solids at final plant output,Effluent,Not specified in the repository summary
+SSV-S,Volatile suspended solids at final plant output,Effluent,Not specified in the repository summary
+SED-S,Sediments at final plant output,Effluent,Not specified in the repository summary
+COND-S,Conductivity at final plant output,Effluent,Not specified in the repository summary
+RD-DBO-P,Performance indicator for biological oxygen demand at primary settler,Performance indicator,Not specified in the repository summary
+RD-SS-P,Performance indicator for suspended solids at primary settler,Performance indicator,Not specified in the repository summary
+RD-SED-P,Performance indicator for sediments at primary settler,Performance indicator,Not specified in the repository summary
+RD-DBO-S,Performance indicator for biological oxygen demand at secondary stage,Performance indicator,Not specified in the repository summary
+RD-DQO-S,Performance indicator for chemical oxygen demand at secondary stage,Performance indicator,Not specified in the repository summary
+RD-DBO-G,Global performance indicator for biological oxygen demand,Global performance indicator,Not specified in the repository summary
+RD-DQO-G,Global performance indicator for chemical oxygen demand,Global performance indicator,Not specified in the repository summary
+RD-SS-G,Global performance indicator for suspended solids,Global performance indicator,Not specified in the repository summary
+RD-SED-G,Global performance indicator for sediments,Global performance indicator,Not specified in the repository summary
